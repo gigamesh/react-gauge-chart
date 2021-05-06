@@ -87,6 +87,7 @@ const GaugeChart = (props) => {
 
   
   const handleResize = () => {
+    console.log('resize!!')
     var resize = true
 
     renderChart(
@@ -109,7 +110,7 @@ const GaugeChart = (props) => {
   }
   useEffect(() => {
     //Set up resize event listener to re-render the chart everytime the window is resized
-    window.addEventListener('resize', handleResize)
+    // window.addEventListener('resize', handleResize)
     return () => {
       window.removeEventListener('resize', handleResize)
     }
