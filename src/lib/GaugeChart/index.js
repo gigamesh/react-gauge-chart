@@ -3,7 +3,7 @@ import {
   arc,
   pie,
   select,
-  easeElastic,
+  easeSinInOut,
   scaleLinear,
   interpolateHsl,
   interpolateNumber,
@@ -381,7 +381,7 @@ const drawNeedle = (
     needle.current
       .transition()
       .delay(props.animDelay)
-      .ease(easeElastic)
+      .ease(easeSinInOut)
       .duration(props.animateDuration)
       .tween("progress", function () {
         const currentPercent = interpolateNumber(prevPercent, percent);

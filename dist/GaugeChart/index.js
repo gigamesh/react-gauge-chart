@@ -271,7 +271,7 @@ var drawNeedle = function drawNeedle(resize, prevProps, props, width, needle, co
 
 
   if (!resize && animate) {
-    needle.current.transition().delay(props.animDelay).ease(_d.easeElastic).duration(props.animateDuration).tween("progress", function () {
+    needle.current.transition().delay(props.animDelay).ease(_d.easeSinInOut).duration(props.animateDuration).tween("progress", function () {
       var currentPercent = (0, _d.interpolateNumber)(prevPercent, percent);
       return function (percentOfPercent) {
         var progress = currentPercent(percentOfPercent);
